@@ -1,0 +1,19 @@
+.navbar-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #1D1F22;;
+
+    vertical-align: middle;
+    height: 100%;
+    margin-right: auto;
+}
+
+.navbar-link:hover, .active-category {
+    border-bottom: 2px solid #5ECE7B;
+    font-weight: 600;
+    color: #5ECE7B;
+}
