@@ -4,7 +4,6 @@ import { getProducts } from "./productActions";
 
 export const getCategories = () => async (dispatch) => {
   let data = await makeQuery(GET_CATEGORIES);
-  console.log("getCategories:", data.categories[0].name);
   const action = {
     type: "GET_ALL_CATEGORIES",
     payload: {

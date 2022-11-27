@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { getCategories, setCategory } from "../redux/actions/categoryActions";
 import { getCurrencies } from "../redux/actions/currencyActions";
 import { ReactComponent as Logo } from "../static/a-logo.svg";
+import CurrencyOptions from "./navbar/CurrencyOptions";
 import NavBarLink from "./navbar/NavBarLink";
 
 class NavBar extends Component {
@@ -68,7 +69,9 @@ class NavBar extends Component {
             justifyContent: "flex-end",
             flex: 4,
             gap: "52px",
-          }}></div>
+          }}>
+          <CurrencyOptions />
+        </div>
       </nav>
     );
   }

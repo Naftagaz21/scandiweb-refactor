@@ -5,7 +5,6 @@ import "./products/products.css";
 
 class ProductList extends Component {
   render() {
-    console.log("PRODUCTLIST", this.props);
     return (
       <div
         className="product-list-page"

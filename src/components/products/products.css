@@ -240,3 +240,64 @@
     font-size: 16px;
     line-height: 160%;
 }
+
+/* Currency modal */
+.currency-modal {
+    background-color: #fff;
+    width: 114px;
+    height: auto;
+    position: absolute;
+    top:68px;
+    right: 74px;
+    box-shadow: 0px 4px 12px rgba(146, 150, 153, 0.39);
+    z-index: 1;
+}
+
+.currency-option-wrapper {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.currency {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    color: #1D1F22;
+    cursor: pointer;
+    margin: 0;
+    padding: 8px;
+}
+
+.currency:hover{
+    background-color: #f4f3f3;
+}
+
+.currency-modal-container {
+    position: fixed;
+    margin-top: 80px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: "none";
+    z-index: 100;
+}
+
+.currency-main-modal {
+    top: 0px;
+    right: 120px;
+    position: absolute;
+    background-color: white;
+    color: #1D1F22;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.currency-option:hover {
+    background: #EEEEEE;
+}
