@@ -17,3 +17,29 @@
     font-weight: 600;
     color: #5ECE7B;
 }
+
+/* Mini cart modal */
+.mini-cart-modal-container {
+    position: fixed;
+    margin-top: 80px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(57, 55, 72, 0.22);
+    z-index: 100;
+  }
+
+  .hidden {
+    display: none;
+}
+
+.modal-main-container {
+    top: 0;
+    right: 80px;
+    position: absolute;
+    background-color: white;
+    color: #1D1F22;
+    width: 325px;
+    padding-left: calc(100vw - 100%);
+  }

@@ -52,9 +52,9 @@ class ProductAttributes extends Component {
     return (
       <div className="product-attributes">
         {this.props.product.attributes.length > 0 &&
-          this.props.product.attributes.map((attribute) => {
+          this.props.product.attributes.map((attribute, i) => {
             return (
-              <div className="attribute">
+              <div className="attribute" key={"item-attribute-" + i}>
                 <p className="attribute-label">{attribute.name}:</p>
                 <div className="attribute-container">
                   {attribute.items.length > 0 &&
@@ -90,7 +90,8 @@ class ProductAttributes extends Component {
                                   color: item.value,
                                 }
                               : {}
-                          }>
+                          }
+                        >
                           {attribute.type === "swatch" ? "" : item.value}
                         </button>
                       );
@@ -114,13 +115,15 @@ class ProductAttributes extends Component {
                 ? "add-to-cart-button"
                 : "add-to-cart-button out-of-stock-button"
             }
-            onClick={this.addToCart.bind(this, product)}>
+            onClick={this.addToCart.bind(this, product)}
+          >
             <span
               className={
                 this.props.product.inStock
                   ? "add-to-cart-button-text"
                   : "out-of-stock-text"
-              }></span>
+              }
+            ></span>
           </button>
         </div>
 
@@ -128,7 +131,8 @@ class ProductAttributes extends Component {
           <p
             dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(this.props.product.description),
-            }}></p>
+            }}
+          ></p>
         </div>
       </div>
     );

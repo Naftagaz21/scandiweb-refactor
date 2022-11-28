@@ -4,6 +4,7 @@ import { getCategories, setCategory } from "../redux/actions/categoryActions";
 import { getCurrencies } from "../redux/actions/currencyActions";
 import { ReactComponent as Logo } from "../static/a-logo.svg";
 import CurrencyOptions from "./navbar/CurrencyOptions";
+import MiniCart from "./navbar/MiniCart";
 import NavBarLink from "./navbar/NavBarLink";
 
 class NavBar extends Component {
@@ -24,7 +25,8 @@ class NavBar extends Component {
           marginLeft: "100px",
           marginRight: "100px",
           height: "68px",
-        }}>
+        }}
+      >
         <div
           className="navbar-categories"
           style={{
@@ -34,7 +36,8 @@ class NavBar extends Component {
             margin: "0 auto",
             paddingTop: "22px",
             gap: "22px",
-          }}>
+          }}
+        >
           {this.props.categories.length > 0 &&
             this.props.categories.map((category) => {
               return (
@@ -53,7 +56,8 @@ class NavBar extends Component {
             alignItems: "center",
             justifyContent: "center",
             flex: 1,
-          }}>
+          }}
+        >
           <Logo
             style={{
               width: "50px",
@@ -69,8 +73,10 @@ class NavBar extends Component {
             justifyContent: "flex-end",
             flex: 4,
             gap: "52px",
-          }}>
+          }}
+        >
           <CurrencyOptions />
+          <MiniCart />
         </div>
       </nav>
     );
