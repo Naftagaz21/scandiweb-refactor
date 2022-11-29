@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import MiniCartItem from "./MiniCartItem";
 
 class MiniCartModal extends Component {
   constructor(props) {
@@ -77,8 +78,20 @@ class MiniCartModal extends Component {
               }}
             >
               <span style={{ fontWeight: "700" }}> My Bag, </span>
-              {this.props.items.length} items
+              {this.state.itemCount} items
             </p>
+            <div className="minicart-item-container">
+              {this.props.items.length > 0 &&
+                this.props.items.map((item, i) => {
+                  return (
+                    <MiniCartItem
+                      key={"minicart-item-" + i}
+                      item={item}
+                      selectedCurrency={this.props.selectedCurrency}
+                    />
+                  );
+                })}
+            </div>
           </section>
         </div>
       </div>

@@ -1,0 +1,13 @@
+.minicart-title {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 160%;
+    color: #1D1F22;
+}
+
+.minicart-price {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 160%;
+    color: #1D1F22;
+}
